@@ -2,6 +2,25 @@
 
 A local browser-based strategy card game demo inspired by Sanguosha, focused on readable solo identity-mode play against AI opponents.
 
+## Open The Game
+
+You do not need to install anything or use the command line to try the game.
+
+1. Click the green **Code** button on this GitHub page.
+2. Click **Download ZIP**.
+3. Unzip the downloaded folder.
+4. Open the unzipped folder.
+5. Double-click **`index.html`**.
+6. The game should open in your web browser.
+
+Open **`index.html`** to play the game. The other main files are supporting files:
+
+- `game.js` contains the game logic.
+- `styles.css` contains the visual styling.
+- `assets/` contains images used by the game.
+
+If your browser blocks local files or something does not load correctly, use the developer option below to run a tiny local server.
+
 ## Preview
 
 Screenshot/GIF placeholder: add a current gameplay screenshot before sharing this repository publicly, for example:
@@ -42,7 +61,7 @@ Playable demo. The core loop is implemented, including five-player and eight-pla
 - Node.js test scripts.
 - Playwright/Chrome-based visual layout verification.
 
-## Local Setup
+## Local Setup For Developers
 
 There are currently no package dependencies and no install step.
 
@@ -50,13 +69,13 @@ There are currently no package dependencies and no install step.
 # No install command is required.
 ```
 
-Run directly:
+Run directly from the project folder:
 
 ```bash
 open index.html
 ```
 
-Or serve the folder locally:
+Or serve the folder locally if browser file restrictions get in the way:
 
 ```bash
 python3 -m http.server 8000

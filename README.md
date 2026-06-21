@@ -1,59 +1,58 @@
-# Singleplayer Sanguosha Web Demo
+# Singleplayer Sanguosha
 
-A local browser-based strategy card game demo inspired by Sanguosha, focused on readable solo identity-mode play against AI opponents.
+A solo browser card table with hidden roles, AI opponents, and just enough chaos to feel alive.
 
-## Open The Game
+This is a playable, local web game inspired by Sanguosha-style identity play: pick a seat, read the table, survive the politics, and see if your reads are better than the AI's. 🎴
 
-You do not need to install anything or use the command line to try the game.
+## Open The Game In 30 Seconds
+
+No install. No account. No command line.
 
 1. Click the green **Code** button on this GitHub page.
 2. Click **Download ZIP**.
 3. Unzip the downloaded folder.
-4. Open the unzipped folder.
-5. Double-click **`index.html`**.
-6. The game should open in your web browser.
+4. Open the folder.
+5. Double-click **`PLAY.html`**.
+6. If that does not work, double-click **`index.html`** instead.
 
-Open **`index.html`** to play the game. The other main files are supporting files:
+That is it. The game runs locally in your browser.
 
-- `game.js` contains the game logic.
-- `styles.css` contains the visual styling.
-- `assets/` contains images used by the game.
+## What Makes It Fun
 
-If your browser blocks local files or something does not load correctly, use the developer option below to run a tiny local server.
+- **Hidden roles:** not everyone at the table wants the same thing.
+- **AI opponents:** the other seats act on public information and visible behavior.
+- **Readable table state:** cards, targets, damage, judgement, death, and identity reveals are shown on the table and in the battle log.
+- **Manual reads:** mark who you think is loyal, rebel, or neutral as the game unfolds.
+- **Two table sizes:** play a faster five-player identity game or the fuller eight-player mode.
+- **Local career stats:** your browser keeps lightweight match history so each game does not feel like a one-off. ⚔️
+
+## How To Play
+
+1. Open **`PLAY.html`** or **`index.html`**.
+2. Choose five-player or eight-player identity mode.
+3. Pick a character, character pool, and AI style.
+4. Start a new game.
+5. Follow the prompt at the bottom of the table: play cards, choose targets, respond, discard, or end your turn.
+6. Watch the center table and battle log to understand what just happened.
+7. Use your own identity marks as your read on the table changes. 🕵️
+
+## Current Status
+
+Playable demo. The core loop is implemented: five-player and eight-player identity modes, local AI turns, card play, responses, judgement, damage, rescue, death, battle logs, hover tooltips, and local career tracking.
+
+This is still a personal portfolio/demo project, not a complete official rules engine. Some rule details, AI heuristics, visual polish, and assets are still being refined.
 
 ## Preview
 
-Screenshot/GIF placeholder: add a current gameplay screenshot before sharing this repository publicly, for example:
+Screenshot/GIF placeholder: add a current gameplay screenshot before sharing this repository widely, for example:
 
 ```text
 docs/assets/gameplay-screenshot.png
 ```
 
-## What This Is
+## For Developers
 
-This project is a single-player web game demo that runs locally in the browser. It recreates the feel of a tabletop identity-mode card game: selecting a mode, managing a hand, choosing targets, responding to events, tracking equipment/judgement states, and reading the table through player seats, center-table feedback, and a structured battle log.
-
-The project was built as an AI-assisted coding exercise and is being prepared as a public portfolio/demo repository. It is not an official client, a commercial game, a multiplayer service, or a complete rules authority.
-
-## Current Status
-
-Playable demo. The core loop is implemented, including five-player and eight-player identity modes, local AI turns, card play, event resolution, battle logs, tooltips, and local career tracking. Some rules, AI heuristics, visual assets, and UX details are still being refined.
-
-## Core Features
-
-- Five-player and eight-player identity-game modes.
-- Local AI opponents with public-information identity inference.
-- Character and card pools inspired by classic Sanguosha-style identity play.
-- Interactive hand area with playable, selected, response, and discard states.
-- Equipment, judgement, chained/flipped, health, role, and hand-count state on player seats.
-- Center-table event visualization for card use, judgement, damage, rescue, death, and identity reveal.
-- Structured battle log for turn sections and key events.
-- Hover tooltips for cards, skills, equipment, and public player state.
-- Manual identity marking for the human player's own reads.
-- Local save/career tracking through browser storage.
-- Smoke, stability, and visual layout checks.
-
-## Tech Stack
+### Tech Stack
 
 - Vanilla HTML, CSS, and JavaScript.
 - Static browser app: no bundler and no runtime backend.
@@ -61,7 +60,15 @@ Playable demo. The core loop is implemented, including five-player and eight-pla
 - Node.js test scripts.
 - Playwright/Chrome-based visual layout verification.
 
-## Local Setup For Developers
+### Main Files
+
+- `PLAY.html` is the friendly launch file for non-technical users.
+- `index.html` is the real app entrypoint.
+- `game.js` contains the game logic, AI, rendering hooks, and persistence.
+- `styles.css` contains the visual styling and layout system.
+- `assets/` contains images used by the game.
+
+### Local Setup
 
 There are currently no package dependencies and no install step.
 
@@ -87,7 +94,7 @@ Then open:
 http://localhost:8000/
 ```
 
-## Build
+### Build
 
 There is currently no build step. The app is a static HTML/CSS/JS project.
 
@@ -95,7 +102,7 @@ There is currently no build step. The app is a static HTML/CSS/JS project.
 # No build command is required.
 ```
 
-## Tests
+### Tests
 
 Use Node.js 20+.
 
@@ -122,17 +129,6 @@ node tests/stability-test.mjs
 
 The visual test expects Playwright and a local Chrome installation. If Playwright is not installed in this repository, set `PLAYWRIGHT_MODULE_PATH` to an existing Playwright package path. Set `CHROME_PATH` if Chrome is installed somewhere other than the default path.
 
-## How To Play
-
-1. Open the start screen.
-2. Choose five-player or eight-player identity mode.
-3. Choose a character pool, AI style, and player character.
-4. Start a new game.
-5. Use the hand area and action prompt to play cards, select targets, respond, discard, or end your turn.
-6. Read the center event area and player seats to understand the current table state.
-7. Use the battle log as supporting detail when you want to review what happened.
-8. At the end of a game, review the result screen and career stats, then start another game.
-
 ## Known Limitations
 
 - This is a local-only single-player demo; there is no online multiplayer.
@@ -143,12 +139,12 @@ The visual test expects Playwright and a local Chrome installation. If Playwrigh
 
 ## Roadmap
 
+- Add a polished screenshot/GIF and short demo video for the public repository.
 - Continue improving player-facing clarity for card use, responses, judgement, rescue, death, and identity reveal events.
 - Improve AI support behavior and identity inference while preserving fair hidden-information boundaries.
 - Audit and replace uncleared third-party visual assets where needed.
-- Add a polished screenshot/GIF and short demo video for the public repository.
 - Split the large game script into maintainable modules if the project continues beyond demo scope.
-- Add a lightweight automated publish/deploy path if the game is hosted publicly.
+- Add a lightweight hosted demo path if the game is shared more broadly.
 
 ## Attribution And Disclaimer
 

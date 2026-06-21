@@ -10,6 +10,7 @@ This is an unofficial, non-commercial fan/educational demo. Do not imply affilia
 
 ## Repository Structure
 
+- `PLAY.html` - friendly launch file for non-technical users; it redirects to the real app entrypoint.
 - `index.html` - static app shell and primary DOM structure.
 - `game.js` - game rules, state, AI, rendering hooks, localStorage persistence, and test APIs.
 - `styles.css` - full UI/theme/layout system. This file has many cascade guard sections; inspect before overriding.

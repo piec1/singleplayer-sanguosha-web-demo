@@ -1,6 +1,7 @@
 # Singleplayer Sanguosha(三国杀)
 
 【English version in development】
+
 A solo browser card table with hidden roles, AI opponents, and just enough chaos to feel alive.
 
 This is a playable, local web game inspired by Sanguosha-style identity play: pick a seat, read the table, survive the politics, and see if your reads are better than the AI's. 🎴

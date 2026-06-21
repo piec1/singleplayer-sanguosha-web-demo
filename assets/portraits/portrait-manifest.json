@@ -1,0 +1,528 @@
+{
+  "source": "https://www.sanguosha.com/hero",
+  "generatedAt": "2026-06-20T05:33:23.590Z",
+  "count": 65,
+  "portraits": {
+    "liubei": {
+      "name": "刘备",
+      "sourceName": "刘备",
+      "sourcePack": "标准",
+      "gid": 1,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/1.png",
+      "file": "liubei.png"
+    },
+    "guanyu": {
+      "name": "关羽",
+      "sourceName": "关羽",
+      "sourcePack": "标准",
+      "gid": 2,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/2.png",
+      "file": "guanyu.png"
+    },
+    "zhangfei": {
+      "name": "张飞",
+      "sourceName": "张飞",
+      "sourcePack": "标准",
+      "gid": 3,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/3.png",
+      "file": "zhangfei.png"
+    },
+    "zhaoyun": {
+      "name": "赵云",
+      "sourceName": "赵云",
+      "sourcePack": "标准",
+      "gid": 5,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/5.png",
+      "file": "zhaoyun.png"
+    },
+    "machao": {
+      "name": "马超",
+      "sourceName": "马超",
+      "sourcePack": "标准",
+      "gid": 6,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/6.png",
+      "file": "machao.png"
+    },
+    "zhugeliang": {
+      "name": "诸葛亮",
+      "sourceName": "诸葛亮",
+      "sourcePack": "标准",
+      "gid": 4,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/4.png",
+      "file": "zhugeliang.png"
+    },
+    "wolongzhugeliang": {
+      "name": "卧龙诸葛",
+      "sourceName": "卧龙诸葛亮",
+      "sourcePack": "风林火山",
+      "gid": 37,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/37.png",
+      "file": "wolongzhugeliang.png"
+    },
+    "huangyueying": {
+      "name": "黄月英",
+      "sourceName": "黄月英",
+      "sourcePack": "标准",
+      "gid": 7,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/7.png",
+      "file": "huangyueying.png"
+    },
+    "huangzhong": {
+      "name": "黄忠",
+      "sourceName": "黄忠",
+      "sourcePack": "风林火山",
+      "gid": 61,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/61.png",
+      "file": "huangzhong.png"
+    },
+    "weiyan": {
+      "name": "魏延",
+      "sourceName": "魏延",
+      "sourcePack": "风林火山",
+      "gid": 27,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/27.png",
+      "file": "weiyan.png"
+    },
+    "pangtong": {
+      "name": "庞统",
+      "sourceName": "庞统",
+      "sourcePack": "风林火山",
+      "gid": 36,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/36.png",
+      "file": "pangtong.png"
+    },
+    "jiangwei": {
+      "name": "姜维",
+      "sourceName": "姜维",
+      "sourcePack": "风林火山",
+      "gid": 52,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/52.png",
+      "file": "jiangwei.png"
+    },
+    "liushan": {
+      "name": "刘禅",
+      "sourceName": "刘禅",
+      "sourcePack": "风林火山",
+      "gid": 53,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/53.png",
+      "file": "liushan.png"
+    },
+    "caocao": {
+      "name": "曹操",
+      "sourceName": "曹操",
+      "sourcePack": "标准",
+      "gid": 15,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/15.png",
+      "file": "caocao.png"
+    },
+    "simayi": {
+      "name": "司马懿",
+      "sourceName": "司马懿",
+      "sourcePack": "标准",
+      "gid": 16,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/16.png",
+      "file": "simayi.png"
+    },
+    "xiahoudun": {
+      "name": "夏侯惇",
+      "sourceName": "夏侯惇",
+      "sourcePack": "标准",
+      "gid": 17,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/17.png",
+      "file": "xiahoudun.png"
+    },
+    "xiahouyuan": {
+      "name": "夏侯渊",
+      "sourceName": "夏侯渊",
+      "sourcePack": "风林火山",
+      "gid": 28,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/28.png",
+      "file": "xiahouyuan.png"
+    },
+    "caoren": {
+      "name": "曹仁",
+      "sourceName": "曹仁",
+      "sourcePack": "风林火山",
+      "gid": 29,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/29.png",
+      "file": "caoren.png"
+    },
+    "zhangliao": {
+      "name": "张辽",
+      "sourceName": "张辽",
+      "sourcePack": "标准",
+      "gid": 18,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/18.png",
+      "file": "zhangliao.png"
+    },
+    "xuchu": {
+      "name": "许褚",
+      "sourceName": "许褚",
+      "sourcePack": "标准",
+      "gid": 19,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/19.png",
+      "file": "xuchu.png"
+    },
+    "guojia": {
+      "name": "郭嘉",
+      "sourceName": "郭嘉",
+      "sourcePack": "标准",
+      "gid": 20,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/20.png",
+      "file": "guojia.png"
+    },
+    "zhenji": {
+      "name": "甄姬",
+      "sourceName": "甄姬",
+      "sourcePack": "标准",
+      "gid": 21,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/21.png",
+      "file": "zhenji.png"
+    },
+    "xunyu": {
+      "name": "荀彧",
+      "sourceName": "荀彧",
+      "sourcePack": "风林火山",
+      "gid": 35,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/35.png",
+      "file": "xunyu.png"
+    },
+    "dianwei": {
+      "name": "典韦",
+      "sourceName": "典韦",
+      "sourcePack": "风林火山",
+      "gid": 34,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/34.png",
+      "file": "dianwei.png"
+    },
+    "xunyou": {
+      "name": "荀攸",
+      "sourceName": "荀攸",
+      "sourcePack": "一将成名",
+      "gid": 164,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/164.png",
+      "file": "xunyou.png"
+    },
+    "xuhuang": {
+      "name": "徐晃",
+      "sourceName": "徐晃",
+      "sourcePack": "风林火山",
+      "gid": 42,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/42.png",
+      "file": "xuhuang.png"
+    },
+    "caopi": {
+      "name": "曹丕",
+      "sourceName": "曹丕",
+      "sourcePack": "风林火山",
+      "gid": 43,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/43.png",
+      "file": "caopi.png"
+    },
+    "zhanghe": {
+      "name": "张郃",
+      "sourceName": "张郃",
+      "sourcePack": "风林火山",
+      "gid": 50,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/50.png",
+      "file": "zhanghe.png"
+    },
+    "dengai": {
+      "name": "邓艾",
+      "sourceName": "邓艾",
+      "sourcePack": "风林火山",
+      "gid": 51,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/51.png",
+      "file": "dengai.png"
+    },
+    "sunquan": {
+      "name": "孙权",
+      "sourceName": "孙权",
+      "sourcePack": "标准",
+      "gid": 8,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/8.png",
+      "file": "sunquan.png"
+    },
+    "ganning": {
+      "name": "甘宁",
+      "sourceName": "甘宁",
+      "sourcePack": "标准",
+      "gid": 9,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/9.png",
+      "file": "ganning.png"
+    },
+    "lvmeng": {
+      "name": "吕蒙",
+      "sourceName": "吕蒙",
+      "sourcePack": "标准",
+      "gid": 10,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/10.png",
+      "file": "lvmeng.png"
+    },
+    "huanggai": {
+      "name": "黄盖",
+      "sourceName": "黄盖",
+      "sourcePack": "标准",
+      "gid": 11,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/11.png",
+      "file": "huanggai.png"
+    },
+    "zhouyu": {
+      "name": "周瑜",
+      "sourceName": "周瑜",
+      "sourcePack": "标准",
+      "gid": 12,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/12.png",
+      "file": "zhouyu.png"
+    },
+    "daqiao": {
+      "name": "大乔",
+      "sourceName": "大乔",
+      "sourcePack": "标准",
+      "gid": 13,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/13.png",
+      "file": "daqiao.png"
+    },
+    "luxun": {
+      "name": "陆逊",
+      "sourceName": "陆逊",
+      "sourcePack": "标准",
+      "gid": 14,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/14.png",
+      "file": "luxun.png"
+    },
+    "sunshangxiang": {
+      "name": "孙尚香",
+      "sourceName": "孙尚香",
+      "sourcePack": "标准",
+      "gid": 25,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/25.png",
+      "file": "sunshangxiang.png"
+    },
+    "taishici": {
+      "name": "太史慈",
+      "sourceName": "太史慈",
+      "sourcePack": "风林火山",
+      "gid": 38,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/38.png",
+      "file": "taishici.png"
+    },
+    "xiaoqiao": {
+      "name": "小乔",
+      "sourceName": "小乔",
+      "sourcePack": "风林火山",
+      "gid": 30,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/30.png",
+      "file": "xiaoqiao.png"
+    },
+    "zhoutai": {
+      "name": "周泰",
+      "sourceName": "周泰",
+      "sourcePack": "风林火山",
+      "gid": 210,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/210.png",
+      "file": "zhoutai.png"
+    },
+    "lusu": {
+      "name": "鲁肃",
+      "sourceName": "鲁肃",
+      "sourcePack": "风林火山",
+      "gid": 49,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/49.png",
+      "file": "lusu.png"
+    },
+    "sunjian": {
+      "name": "孙坚",
+      "sourceName": "孙坚",
+      "sourcePack": "风林火山",
+      "gid": 44,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/44.png",
+      "file": "sunjian.png"
+    },
+    "sunce": {
+      "name": "孙策",
+      "sourceName": "孙策",
+      "sourcePack": "风林火山",
+      "gid": 54,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/54.png",
+      "file": "sunce.png"
+    },
+    "zhangzhaozhanghong": {
+      "name": "张昭张纮",
+      "sourceName": "张昭张弘",
+      "sourcePack": "风林火山",
+      "gid": 55,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/55.png",
+      "file": "zhangzhaozhanghong.png"
+    },
+    "huatuo": {
+      "name": "华佗",
+      "sourceName": "华佗",
+      "sourcePack": "标准",
+      "gid": 22,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/22.png",
+      "file": "huatuo.png"
+    },
+    "lvbu": {
+      "name": "吕布",
+      "sourceName": "吕布",
+      "sourcePack": "标准",
+      "gid": 23,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/23.png",
+      "file": "lvbu.png"
+    },
+    "diaochan": {
+      "name": "貂蝉",
+      "sourceName": "貂蝉",
+      "sourcePack": "标准",
+      "gid": 24,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/24.png",
+      "file": "diaochan.png"
+    },
+    "zhangjiao": {
+      "name": "张角",
+      "sourceName": "张角",
+      "sourcePack": "风林火山",
+      "gid": 212,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/212.png",
+      "file": "zhangjiao.png"
+    },
+    "yuji": {
+      "name": "于吉",
+      "sourceName": "于吉",
+      "sourcePack": "风林火山",
+      "gid": 211,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/211.png",
+      "file": "yuji.png"
+    },
+    "yuanshao": {
+      "name": "袁绍",
+      "sourceName": "袁绍",
+      "sourcePack": "风林火山",
+      "gid": 41,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/41.png",
+      "file": "yuanshao.png"
+    },
+    "huaxiong": {
+      "name": "华雄",
+      "sourceName": "华雄",
+      "sourcePack": "标准",
+      "gid": 214,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/214.png",
+      "file": "huaxiong.png"
+    },
+    "jiaxu": {
+      "name": "贾诩",
+      "sourceName": "贾诩",
+      "sourcePack": "风林火山",
+      "gid": 48,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/48.png",
+      "file": "jiaxu.png"
+    },
+    "pangde": {
+      "name": "庞德",
+      "sourceName": "庞德",
+      "sourcePack": "风林火山",
+      "gid": 39,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/39.png",
+      "file": "pangde.png"
+    },
+    "yanliangwenchou": {
+      "name": "颜良文丑",
+      "sourceName": "颜良文丑",
+      "sourcePack": "风林火山",
+      "gid": 40,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/40.png",
+      "file": "yanliangwenchou.png"
+    },
+    "dongzhuo": {
+      "name": "董卓",
+      "sourceName": "董卓",
+      "sourcePack": "风林火山",
+      "gid": 45,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/45.png",
+      "file": "dongzhuo.png"
+    },
+    "menghuo": {
+      "name": "孟获",
+      "sourceName": "孟获",
+      "sourcePack": "风林火山",
+      "gid": 47,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/47.png",
+      "file": "menghuo.png"
+    },
+    "zhurong": {
+      "name": "祝融",
+      "sourceName": "祝融",
+      "sourcePack": "风林火山",
+      "gid": 46,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/46.png",
+      "file": "zhurong.png"
+    },
+    "caiwenji": {
+      "name": "蔡文姬",
+      "sourceName": "蔡文姬",
+      "sourcePack": "风林火山",
+      "gid": 57,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/57.png",
+      "file": "caiwenji.png"
+    },
+    "zuoci": {
+      "name": "左慈",
+      "sourceName": "左慈",
+      "sourcePack": "风林火山",
+      "gid": 56,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/56.png",
+      "file": "zuoci.png"
+    },
+    "yuanshu": {
+      "name": "袁术",
+      "sourceName": "袁术",
+      "sourcePack": "风林火山",
+      "gid": 100,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/100.png",
+      "file": "yuanshu.png"
+    },
+    "fazheng": {
+      "name": "法正",
+      "sourceName": "法正",
+      "sourcePack": "一将成名",
+      "gid": 185,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/185.png",
+      "file": "fazheng.png"
+    },
+    "xushu": {
+      "name": "徐庶",
+      "sourceName": "徐庶",
+      "sourcePack": "一将成名",
+      "gid": 186,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/186.png",
+      "file": "xushu.png"
+    },
+    "zhangchunhua": {
+      "name": "张春华",
+      "sourceName": "张春华",
+      "sourcePack": "一将成名",
+      "gid": 161,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/161.png",
+      "file": "zhangchunhua.png"
+    },
+    "wuguotai": {
+      "name": "吴国太",
+      "sourceName": "吴国太",
+      "sourcePack": "一将成名",
+      "gid": 157,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/157.png",
+      "file": "wuguotai.png"
+    },
+    "bulianshi": {
+      "name": "步练师",
+      "sourceName": "步练师",
+      "sourcePack": "一将成名",
+      "gid": 168,
+      "url": "https://web.sanguosha.com/220/h5_2/res/runtime/pc/activity/shequshow/dianjiang/168.png",
+      "file": "bulianshi.png"
+    }
+  },
+  "misses": []
+}

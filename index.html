@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>单机三国杀</title>
+    <link rel="stylesheet" href="./styles.css?v=265">
+  </head>
+  <body>
+    <main class="app">
+      <section id="setup" class="setup-screen">
+        <nav class="screen-switch" aria-label="页面">
+          <span class="active">首页</span>
+          <span>牌桌</span>
+        </nav>
+        <div class="brand">
+          <div class="seal">杀</div>
+          <div>
+            <span class="brand-kicker">本地单机 · 身份推理桌游</span>
+            <h1>单机三国杀</h1>
+            <p>本地身份局，公平的 AI 推理，一张能<strong>真正看懂</strong>的牌桌。<br>单机，也有完整的博弈与算计。</p>
+          </div>
+        </div>
+
+        <div class="setup-actions launcher-actions">
+          <button id="startGame" class="primary tip" data-tip="开始身份局\n按当前模式、武将包和 AI 难度开一局；主公公开，其余身份隐藏。">开始新局</button>
+          <button id="continueGame" class="tip" disabled data-tip="继续上次对局\n当前没有保存中的牌局。">
+            <span>继续上次对局</span>
+            <small id="continueGameStatus">暂无可继续对局</small>
+          </button>
+          <button id="quickSim" class="tip ghost" data-tip="观战演示\n把玩家也交给 AI，快速观看一局流程。">观战演示</button>
+        </div>
+
+        <div class="setup-hero">
+          <div class="setup-main-panel">
+            <div class="setup-panel-head">
+              <span class="eyebrow">新局设置</span>
+              <strong>新局设置</strong>
+            </div>
+            <div class="setup-primary-grid">
+              <label class="setup-field">
+                <span>对局模式</span>
+                <select id="modeSelect" class="native-hidden" aria-hidden="true" tabindex="-1">
+                  <option value="8" selected>八人身份局</option>
+                  <option value="5">五人身份局</option>
+                </select>
+                <div id="modeSegment" class="setup-mode-segment" role="group" aria-label="对局模式">
+                  <button type="button" class="active" data-mode-value="8">
+                    <b>八人</b>
+                    <small>标准身份局</small>
+                  </button>
+                  <button type="button" data-mode-value="5">
+                    <b>五人</b>
+                    <small>快节奏身份局</small>
+                  </button>
+                </div>
+              </label>
+              <label class="setup-field general-field">
+                <span>你的武将</span>
+                <select id="generalSelect" class="native-hidden" aria-hidden="true" tabindex="-1"></select>
+                <button id="generalPickerOpen" type="button" class="general-picker-entry">
+                  <b id="generalPickerSummary">随机武将</b>
+                  <small id="generalPickerMeta">点击打开武将册</small>
+                </button>
+              </label>
+              <label class="setup-field ai-field">
+                <span>AI 难度</span>
+                <select id="aiMode" class="native-hidden" aria-hidden="true" tabindex="-1">
+                  <option value="fair">稳健</option>
+                  <option value="strategist" selected>老练</option>
+                  <option value="oracle">强敌挑战</option>
+                </select>
+                <div id="aiSegment" class="setup-ai-segment" role="group" aria-label="AI 难度">
+                  <button type="button" data-ai-mode="fair">
+                    <b>稳健</b>
+                    <small>保守公平</small>
+                  </button>
+                  <button type="button" class="active" data-ai-mode="strategist">
+                    <b>老练</b>
+                    <small>推荐体验</small>
+                  </button>
+                  <button type="button" data-ai-mode="oracle">
+                    <b>强敌</b>
+                    <small>额外信息</small>
+                  </button>
+                </div>
+              </label>
+              <label class="setup-field roster-field">
+                <span>武将包</span>
+                <select id="rosterSelect" class="native-hidden" aria-hidden="true" tabindex="-1">
+                  <option value="strict" selected>标准包 + 风火林山</option>
+                  <option value="standard2013">标准扩展：加入华雄/袁术</option>
+                  <option value="all">全部可用武将</option>
+                </select>
+                <div id="rosterSegment" class="setup-roster-segment" role="group" aria-label="武将包">
+                  <button type="button" class="active" data-roster-mode="strict">
+                    <b>标准</b>
+                    <small>57 人</small>
+                  </button>
+                  <button type="button" data-roster-mode="standard2013">
+                    <b>扩展</b>
+                    <small>华雄/袁术</small>
+                  </button>
+                  <button type="button" data-roster-mode="all">
+                    <b>全部</b>
+                    <small>65 人</small>
+                  </button>
+                </div>
+              </label>
+            </div>
+
+            <div id="setupMatchSummary" class="setup-match-summary" aria-live="polite"></div>
+
+            <details class="advanced-setup">
+              <summary>高级设置</summary>
+              <div class="setup-grid">
+                <label>
+                  显示 AI 手牌
+                  <select id="debugMode">
+                    <option value="off" selected>关闭</option>
+                    <option value="on">开启</option>
+                  </select>
+                  <small>调试/学习用；正常对局建议关闭。</small>
+                </label>
+              </div>
+            </details>
+
+          </div>
+        </div>
+        <aside class="setup-record-card">
+          <span class="eyebrow">名将档案</span>
+          <div id="setupCareer" class="setup-career"></div>
+        </aside>
+      </section>
+
+      <section id="game" class="game-screen hidden">
+        <header class="topbar">
+          <div class="topbar-title">
+            <div class="mini-seal">杀</div>
+            <div>
+              <div class="eyebrow">本地单机 · 身份局</div>
+              <h2 id="roundTitle">第 1 轮</h2>
+              <div id="tableStatusBar" class="table-status-bar" aria-live="polite"></div>
+            </div>
+          </div>
+          <div class="topbar-actions">
+            <button id="tempoQuick" class="tempo-control tempo-chip tip" data-tip="节奏设置\n打开设置面板调整牌局速度。"><span>节奏</span><strong id="tempoLabel">正常</strong></button>
+            <select id="tempoSelect" class="native-hidden" aria-hidden="true" tabindex="-1" hidden>
+              <option value="ultra">超慢</option>
+              <option value="slow">慢速</option>
+              <option value="normal" selected>正常</option>
+              <option value="fast">快速</option>
+            </select>
+            <button id="sidePanelToggle" class="panel-toggle tip" data-tip="展开/收起右侧战报。收起时牌桌会更大；战绩和更多信息仍可从设置恢复。">展开战报</button>
+            <button id="settingsOpen" class="tip" data-tip="设置\n调整节奏、显示面板和辅助观看选项。">设置</button>
+            <button id="newGame" class="tip" data-tip="新局\n返回开局设置并重新开始当前网页游戏。">新局</button>
+          </div>
+        </header>
+
+        <section class="board-wrap">
+          <div id="board" class="board"></div>
+          <aside class="side-panel">
+            <div class="pile-card">
+              <div class="pile-stat">
+                <span>牌堆</span>
+                <strong id="deckCount">0</strong>
+              </div>
+              <div class="pile-stat">
+                <span>弃牌</span>
+                <strong id="discardCount">0</strong>
+              </div>
+            </div>
+            <div class="event-card">
+              <h3>当前事件</h3>
+              <div id="prompt" class="prompt">等待开始</div>
+              <div id="choices" class="choices"></div>
+            </div>
+            <div class="info-card">
+              <div class="panel-tabs">
+                <button id="logTab" class="active tip" data-tip="战报\n按每名角色的回合分组显示行动记录，可滚动、收起或放大。">战报</button>
+                <button id="careerTab" class="tip" data-tip="战绩\n记录本机历史对局、身份胜率、武将表现和里程碑。">战绩</button>
+                <details class="panel-advanced">
+                  <summary>更多</summary>
+                  <div>
+                    <button id="readsTab" class="tip" data-tip="局势判断\n查看 AI 基于公开行为形成的身份倾向和简短证据，不读取暗身份。">局势判断</button>
+                    <button id="coverageTab" class="tip" data-tip="技能状态\n查看本局武将技能的说明和当前实现状态。">技能状态</button>
+                  </div>
+                </details>
+              </div>
+              <div id="logPanel">
+                <div class="battle-chat">
+                  <div class="battle-chat-head">
+                    <div>
+                      <strong>牌局战报</strong>
+                      <span id="logModeText">最新行动</span>
+                    </div>
+                    <div class="battle-chat-tools">
+                      <button id="logCollapse" class="tip" data-tip="收起/恢复牌局记录。">收起</button>
+                      <button id="logExpand" class="tip" data-tip="放大/还原战报；如果战报已收起，会直接恢复并放大。">放大</button>
+                    </div>
+                  </div>
+                  <div id="log" class="log"></div>
+                </div>
+              </div>
+              <div id="readsPanel" class="ai-reads hidden">
+                <div id="readsSummary" class="reads-summary"></div>
+                <div id="readsList" class="reads-list"></div>
+              </div>
+              <div id="coveragePanel" class="coverage hidden">
+                <div id="coverageSummary" class="coverage-summary"></div>
+                <div id="coverageList" class="coverage-list"></div>
+              </div>
+              <div id="careerPanel" class="career hidden"></div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="hand-panel">
+          <div class="hand-head">
+            <div>
+              <span class="eyebrow">你的手牌</span>
+              <h3 id="humanName">玩家</h3>
+            </div>
+            <div id="handMode" class="hand-mode"></div>
+            <div id="humanStats" class="human-stats"></div>
+          </div>
+          <div id="hand" class="hand"></div>
+          <div id="actionBar" class="action-bar"></div>
+        </section>
+      </section>
+    </main>
+
+    <div id="tooltip" class="tooltip hidden" role="tooltip"></div>
+    <div id="identityPopover" class="identity-popover hidden" role="dialog" aria-label="标记身份"></div>
+    <div id="endGameModal" class="endgame-modal hidden" role="dialog" aria-modal="true" aria-labelledby="endGameTitle">
+      <section id="endGameCard" class="endgame-card">
+        <button id="endGameClose" type="button" class="endgame-close" aria-label="关闭结算">×</button>
+        <div id="endGameContent"></div>
+      </section>
+    </div>
+    <div id="settingsModal" class="settings-modal hidden" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+      <section class="settings-card">
+        <button id="settingsClose" type="button" class="settings-close" aria-label="关闭设置">×</button>
+        <header>
+          <span class="eyebrow">牌桌设置</span>
+          <h3 id="settingsTitle">设置</h3>
+          <p>调整节奏和辅助观看选项，不改变当前牌局。</p>
+        </header>
+        <div id="settingsContent" class="settings-content"></div>
+      </section>
+    </div>
+    <div id="generalPickerBackdrop" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="generalPickerTitle">
+      <section class="general-picker">
+        <header>
+          <div>
+            <span class="eyebrow">武将册</span>
+            <h3 id="generalPickerTitle">选择你的武将</h3>
+          </div>
+          <button id="generalPickerClose" type="button" class="icon-button" aria-label="关闭武将选择">×</button>
+        </header>
+        <div class="general-picker-toolbar">
+          <div class="filter-chips" aria-label="势力筛选">
+            <button type="button" data-general-filter="all" class="active">全部</button>
+            <button type="button" data-general-filter="魏">魏</button>
+            <button type="button" data-general-filter="蜀">蜀</button>
+            <button type="button" data-general-filter="吴">吴</button>
+            <button type="button" data-general-filter="群">群</button>
+          </div>
+          <label>
+            排序
+            <select id="generalSort">
+              <option value="default">默认</option>
+              <option value="kingdom">势力</option>
+              <option value="hp">体力</option>
+              <option value="skill">技能类型</option>
+            </select>
+          </label>
+        </div>
+        <div id="generalPickerGrid" class="general-picker-grid"></div>
+        <footer>
+          <button id="generalPickerCancel" type="button">取消</button>
+          <button id="generalPickerConfirm" type="button" class="primary">确认选择</button>
+        </footer>
+      </section>
+    </div>
+    <input id="careerImportFile" class="hidden" type="file" accept="application/json,.json">
+    <script src="./game.js?v=176"></script>
+  </body>
+</html>

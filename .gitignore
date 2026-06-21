@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+
+# Local-only working material, generated mockups, private notes, and prompt history.
+local-notes/
+.local/
+
+# Visual regression output should stay outside the public repository.
+sanguosha-visual-check/
+playwright-report/
+test-results/
+
+# Dependency folders if a package manifest is added later.
+node_modules/

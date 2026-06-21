@@ -1,21 +1,20 @@
-# Singleplayer Sanguosha
+# Singleplayer Sanguosha(三国杀)
 
+【English version in development】
 A solo browser card table with hidden roles, AI opponents, and just enough chaos to feel alive.
 
 This is a playable, local web game inspired by Sanguosha-style identity play: pick a seat, read the table, survive the politics, and see if your reads are better than the AI's. 🎴
 
 ## Open The Game In 30 Seconds
 
-No install. No account. No command line.
+This is ready-to-play in your browser - No installing, opening accounts or command lines!
 
 1. Click the green **Code** button on this GitHub page.
 2. Click **Download ZIP**.
 3. Unzip the downloaded folder.
 4. Open the folder.
-5. Double-click **`PLAY.html`**.
-6. If that does not work, double-click **`index.html`** instead.
-
-That is it. The game runs locally in your browser.
+5. Double-click **`PLAY.html`** and it should pop up in your default browser.
+6. If that does not work, right click and select **`open with chrome`** instead.
 
 ## What Makes It Fun
 
@@ -40,7 +39,7 @@ That is it. The game runs locally in your browser.
 
 Playable demo. The core loop is implemented: five-player and eight-player identity modes, local AI turns, card play, responses, judgement, damage, rescue, death, battle logs, hover tooltips, and local career tracking.
 
-This is still a personal portfolio/demo project, not a complete official rules engine. Some rule details, AI heuristics, visual polish, and assets are still being refined.
+**`This is still a personal portfolio/demo project, not a complete official rules engine. Some rule details, AI heuristics, visual polish, and assets are still being refined`**.
 
 ## Preview
 
